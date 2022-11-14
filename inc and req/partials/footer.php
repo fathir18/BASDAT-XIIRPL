@@ -1,6 +1,6 @@
 <?php
 
-$tahun_sekarang = date('Y');
-echo "copyright & copy: {$tahun_sekarang} SMKJP1";
+$tahun_sekarang = date ('Y');
+echo "Copyright &copy; {$tahun_sekarang} SMKJP1";
 
 ?>
