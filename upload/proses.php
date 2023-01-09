@@ -21,31 +21,27 @@ $uploadKTPSukses = move_uploaded_file(
     $fileKTP->tmp_name, "{$folder_upload}/{$fileKTP->name}"
 );
 
-if ($uploadFotoSukses) {
+if($uploadFotoSukses){
     $link = "{$folder_upload}/{$fileFoto->name}";
-    echo "Sukses Upload Foto : <a href = '{$link}'>{$fileFoto->name}</a>";
+    echo "Sukses Upload Foto : <a href = '($link)'>
+    {$fileFoto->name}</a>";
+    echo "<br>";
+}
+if($uploadKTPSukses){
+    $link = "{$folder_upload}/{$fileKTP->name}";
+    echo "Sukses Upload KTP : <a href = '($link)'>
+    {$fileKTP->name}</a>";
     echo "<br>";
 }
 
-if ($uploadKtpSukses) {
-    $link = "{$folder_upload}/{$fileKtp->name}";
-    echo "Sukses Upload Ktp : <a href = '{$link}'>{$fileKtp->name}</a>";
-    echo "<br>";
-}
-
-
-// Batas ukuran file yang di upload
+//batas ukuran file yg diupload
 if ($fileFoto->size > 1000 * 2000){
-    die("File tidak boleh lebih dari 2MB");
+    die("File tidak boleh lebih dari 2mb");
 }
-
-// Jenis gambar yang bisa diupload
-if ($fileKtp->type !== 'image/jpg'){
+//jenis gambar yg bisa diupload
+if ($fileKTP->size !=='image/jpg'){
     die("Foto harus berformat jpg");
 }
-
-
-
 
 // echo "<pre>";
 // print_r($files);
