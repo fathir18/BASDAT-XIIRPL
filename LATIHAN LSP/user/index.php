@@ -23,6 +23,7 @@
         <marquee direction="left"><h4>Welcome <?php 
         $email = $_SESSION['email'];
         include '../koneksi.php';
+        
         $anggota = mysqli_query($koneksi, "select * from anggota where email = '$email'");
         foreach ($anggota as $nama){
             echo $nama['nama'];
@@ -55,6 +56,7 @@
         }
         ?>
     </table>
+    <a href="update-anggota.php?id_anggota=<?php echo $nama['id_anggota']?>" class="btn btn-primary">Customize</a>
     <a href="../logout.php">LOGOUT</a>
     </center>
     </body>

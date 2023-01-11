@@ -26,6 +26,9 @@
         <label>Penerbit</label><br>
         <input type="text" name="penerbit">
         <br>
+        <label>Harga</label><br>
+        <input type="number" name="harga">
+        <br>
         <input class="submit" type="submit" value="submit">
         <input class="cancel" type="reset" value="cancel">
     </form>

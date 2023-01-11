@@ -39,7 +39,9 @@
         <br>
         <input type="text" name="penerbit"value="<?php echo $meledak ['penerbit'];?>" placeholder="Masukkan Penerbit">
         <br>
+        <label>Masukan Harga</label>
         <br>
+        <input type="text" name="harga"value="<?php echo $meledak ['harga'];?>" placeholder="Masukan Harga">
         <input class="submit" type="submit" value="submit"></input>
         <input class="cancel" type="reset" value="cancel"></input>
     </form>
